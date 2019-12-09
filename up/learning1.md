@@ -35,10 +35,24 @@ src 폴더에는 소스코드나 이미지 등 리소스 파일이 들어간다.
 #### AndroidManifest.xml
 안드로이드 앱 설정을 기술하는 파일이다. Activity와 Service 등과 같은 앱에서 사용되는 클래스 선언과 퍼미션 설정 등을 작성한다.
 <hr/>
+
 ### 유용한 단축키 (윈도우)
-Ctrl + Space : 기본 자동완성
-Ctrl + Shift + Space : 현재 위치의 자료형을 바탕으로 자동완성
-Alt + Enter : 오류 수정
-Ctrl + Shift + Enter : 현재 구문 완성
-Ctrl + P : 파라미터 정보 표시
-Alt + Insert  :코드 자동 생성(ex:toString, getter), 정형화된 코드를 생성한다.
+Ctrl + Space : 기본 자동완성  
+Ctrl + Shift + Space : 현재 위치의 자료형을 바탕으로 자동완성  
+Alt + Enter : 오류 수정  
+Ctrl + Shift + Enter : 현재 구문 완성  
+Ctrl + P : 파라미터 정보 표시  
+Alt + Insert : 코드 자동 생성(ex:toString, getter), 정형화된 코드를 생성한다.  
+Ctrl + Alt + V,F,M,C 등 : 지금 커서가 있는 부분을 Extract(추출)할 수 있다.
+* V : Variable  
+* F : Field  
+* M : Method  
+* C : Const  
+  
+변수.notnull + Enter : null을 체크하는 if문을 만들 수 있다.  
+.var : 로컬 변수로 만든다.  
+.field : 멤버변수에 대입  
+.for : for문 만들기  
+이 외에는 설정->Editor->Postfix Copletion에서 확인할 수 있다.  
+Ctrl + B : 메서드의 선언부로 이동한다.  
+Ctrl + Alt + H : 메서드를 호출한 곳 열기.  
