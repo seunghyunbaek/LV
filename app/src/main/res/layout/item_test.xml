@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_test_item"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#3183FE"
+        android:gravity="center"
+        android:text="테스트 아이템"
+        android:textColor="#FFF" />
+
+</LinearLayout>

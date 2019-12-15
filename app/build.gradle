@@ -4,6 +4,10 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
 android {
     compileSdkVersion 28
     buildToolsVersion "29.0.1"
@@ -21,15 +25,57 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.core:core-ktx:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    implementation 'com.google.android.material:material:1.0.0'
+
+    // Futures(androidx.concurrent에 있음)
+    // 이 라이브러리는 Guava의 ListenableFuture 인터페이스와 동등한 독립형 및 콜백 변환을 위한 어댑터를 제공합니다.
+    def futures_version = "1.0.0-rc01"
+    implementation "androidx.concurrent:concurrent-futures:$futures_version"
+
+    // ViewModel and LiveData
+    def lifecycle_version = "2.2.0-alpha03"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+
+    // Navigation
+    def nav_version = "2.2.0-alpha01"
+    // Kotlin
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    // Paging
+    def paging_version = "2.1.0"
+    implementation "androidx.paging:paging-runtime:$paging_version"
+
+    // Room
+    def room_version = "2.2.0-beta01"
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+
+    // WorkManager
+    def work_version = "2.3.0-alpha01"
+    implementation "androidx.work:work-runtime-ktx:$work_version"
+
+    // Kotlin 기반 앱의 경우 annotationProcessor 대신 kapt를 사용해야 합니다
+    implementation 'androidx.core:core-ktx:1.0.0'
+
+    // anko
+    def anko_version = "0.10.8"
+    implementation "org.jetbrains.anko:anko-commons:$anko_version"
+
 }
