@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MyFragmentActivity">
+    tools:context=".SimpleFragment.MyFragmentActivity">
 
     <fragment
         android:id="@+id/myfragment"
-        android:name="com.avon.lv.MyFragment"
+        android:name="com.avon.lv.SimpleFragment.MyFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

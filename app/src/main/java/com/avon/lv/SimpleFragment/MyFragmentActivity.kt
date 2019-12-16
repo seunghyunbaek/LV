@@ -1,8 +1,8 @@
-package com.avon.lv
+package com.avon.lv.SimpleFragment
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
+import com.avon.lv.R
 import org.jetbrains.anko.toast
 
 class MyFragmentActivity : AppCompatActivity(), MyFragment.OnFragmentInteractionListener {

@@ -1,4 +1,4 @@
-package com.avon.lv
+package com.avon.lv.SimpleFragment
 
 
 import android.content.Context
@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
+import com.avon.lv.R
 import kotlinx.android.synthetic.main.fragment_my.*
 import java.lang.RuntimeException
 
@@ -23,7 +23,7 @@ private const val ARG_PARAM2 = "param2"
  */
 class MyFragment : Fragment() {
 
-    private var mListener:OnFragmentInteractionListener? = null
+    private var mListener: OnFragmentInteractionListener? = null
 
     // 뷰를 생성
     override fun onCreateView(
