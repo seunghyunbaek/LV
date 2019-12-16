@@ -2,12 +2,13 @@ package com.avon.lv.TransactionFragment
 
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
 import com.avon.lv.R
 import kotlinx.android.synthetic.main.activity_fragment_transaction.*
 
-class FragmentTransactionActivity : AppCompatActivity() {
+class FragmentTransactionActivity : AppCompatActivity(), View.OnClickListener {
 
     /*
         * 프래그먼트 추가와 삭제는 트랜잭션 단위로 한다
@@ -20,16 +21,19 @@ class FragmentTransactionActivity : AppCompatActivity() {
      */
 
     private val FRAGMENT_TAG = "FRAGMENT_TAG"
+    private val FRAGMENT_TAG2 = "FRAGMENT_TAG2"
     private val KEY_NUMBER = "KEY_NUMBER"
     private var mNumber = 0
     private val mListener = FragmentManager.OnBackStackChangedListener {
         val fragmentManager = supportFragmentManager
         var count = 0
         fragmentManager.fragments.forEach {
-            count++
+            if (it.tag == FRAGMENT_TAG)
+                count++
+            else if (it.tag == FRAGMENT_TAG2)
+                count++
         }
         mNumber = count
-
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,7 +43,11 @@ class FragmentTransactionActivity : AppCompatActivity() {
         add_button.setOnClickListener {
             val fragmentManager = supportFragmentManager
             fragmentManager.beginTransaction() // 트랜잭션 생성
-                .add(R.id.fragment_container, FragmentTransactionFragment.getInstance(mNumber)) // 프래그먼트 생성
+                .add(
+                    R.id.fragment_container,
+                    FragmentTransactionFragment.getInstance(mNumber),
+                    FRAGMENT_TAG
+                ) // 프래그먼트 생성
                 .addToBackStack(null) // 백스택에 추가
                 .commit()
         }
@@ -83,5 +91,36 @@ class FragmentTransactionActivity : AppCompatActivity() {
     override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
         super.onRestoreInstanceState(savedInstanceState)
         mNumber = savedInstanceState!!.getInt(KEY_NUMBER)
+    }
+
+    override fun onBackPressed() {
+        if (supportFragmentManager.backStackEntryCount < 2) {
+            finish()
+        } else {
+            super.onBackPressed()
+        }
+    }
+
+    override fun onClick(v: View) {
+        when (v.id) {
+            R.id.add_button2 -> {
+                val fragmentManager = supportFragmentManager
+                fragmentManager.beginTransaction() // 트랜잭션 생성
+                    .add(
+                        R.id.fragment_container,
+                        FragmentTransactionFragment.getInstance(mNumber),
+                        FRAGMENT_TAG2
+                    ) // 프래그먼트 생성
+                    .addToBackStack(null) // 백스택에 추가
+                    .commit()
+            }
+            R.id.remove_button2 -> {
+                if (mNumber == 0) {
+                    return
+                }
+                val fragmentManager = supportFragmentManager
+                fragmentManager.popBackStack()
+            }
+        }
     }
 }

@@ -9,8 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme_Noactionbar">
-        <activity android:name=".MyFragmentActivity"></activity>
-        <activity android:name=".DatabindingActivity" />
+        <activity android:name=".NetworkCheckFragment.NetworkCheckActivity"></activity>
+        <activity android:name=".TransactionFragment.FragmentTransactionActivity" />
+        <activity android:name=".SimpleFragment.MyFragmentActivity" />
+        <activity android:name=".Databinding.DatabindingActivity" />
         <activity android:name=".AnimationActivity" />
         <activity android:name=".CoordinatorActivity" />
         <activity android:name=".MainActivity">

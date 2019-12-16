@@ -18,6 +18,18 @@
         android:text="간단한 프래그먼트" />
 
     <Button
+        android:id="@+id/btn_transactionfragment_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="트랜잭션 프래그먼트" />
+
+    <Button
+        android:id="@+id/btn_network_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="네트워크 프래그먼트" />
+
+    <Button
         android:id="@+id/btn_click"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

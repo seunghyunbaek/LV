@@ -1,11 +1,13 @@
 package com.avon.lv
 
-import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
+import com.avon.lv.Databinding.DatabindingActivity
+import com.avon.lv.NetworkCheckFragment.NetworkCheckActivity
+import com.avon.lv.SimpleFragment.MyFragmentActivity
+import com.avon.lv.TransactionFragment.FragmentTransactionActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.startActivity
 
@@ -36,17 +38,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private fun setOnclickListener() {
         btn_databinding.setOnClickListener(this) // 데이터 바인딩 액티비티 이동
         btn_click.setOnClickListener(this)
+        btn_transactionfragment_fragment.setOnClickListener(this)
         btn_simple_fragment.setOnClickListener(this)
+        btn_network_fragment.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
         when (v?.id) {
             R.id.btn_databinding -> { startActivity<DatabindingActivity>() }
             R.id.btn_simple_fragment -> {startActivity<MyFragmentActivity>()}
-
-            R.id.btn_click -> {
-                btn_click.text = "Click!!"
-            }
+            R.id.btn_transactionfragment_fragment -> {startActivity<FragmentTransactionActivity>()}
+            R.id.btn_network_fragment -> {startActivity<NetworkCheckActivity>()}
+            R.id.btn_click -> { btn_click.text = "Click!!" }
         }
     }
 }

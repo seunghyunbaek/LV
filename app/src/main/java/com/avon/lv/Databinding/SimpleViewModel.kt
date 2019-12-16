@@ -1,4 +1,4 @@
-package com.avon.lv
+package com.avon.lv.Databinding
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
