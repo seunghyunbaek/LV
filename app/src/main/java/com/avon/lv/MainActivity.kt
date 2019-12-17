@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.os.PersistableBundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.avon.lv.Databinding.DatabindingActivity
+import com.avon.lv.databinding.DatabindingActivity
 import com.avon.lv.NetworkCheckFragment.NetworkCheckActivity
 import com.avon.lv.SimpleFragment.MyFragmentActivity
 import com.avon.lv.TransactionFragment.FragmentTransactionActivity

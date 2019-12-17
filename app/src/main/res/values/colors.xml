@@ -3,4 +3,7 @@
     <color name="colorPrimary">#073bba</color>
     <color name="colorPrimaryDark">#000</color>
     <color name="colorAccent">#de9800</color>
+
+    <color name="popular">#ff76a5</color>
+    <color name="star">#ff0057</color>
 </resources>

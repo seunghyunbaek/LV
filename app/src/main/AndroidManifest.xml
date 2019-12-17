@@ -12,7 +12,7 @@
         <activity android:name=".NetworkCheckFragment.NetworkCheckActivity"></activity>
         <activity android:name=".TransactionFragment.FragmentTransactionActivity" />
         <activity android:name=".SimpleFragment.MyFragmentActivity" />
-        <activity android:name=".Databinding.DatabindingActivity" />
+        <activity android:name=".databinding.DatabindingActivity" />
         <activity android:name=".AnimationActivity" />
         <activity android:name=".CoordinatorActivity" />
         <activity android:name=".MainActivity">
