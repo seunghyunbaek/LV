@@ -19,7 +19,6 @@ class SimpleViewModel : ViewModel() {
     val lastName: LiveData<String> = _lastName
     val likes: LiveData<Int> = _likes
 
-
 //    val popularity: Popularity
 //        get() {
 //            return when {

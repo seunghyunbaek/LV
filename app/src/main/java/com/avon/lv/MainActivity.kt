@@ -8,6 +8,7 @@ import com.avon.lv.databinding.DatabindingActivity
 import com.avon.lv.NetworkCheckFragment.NetworkCheckActivity
 import com.avon.lv.SimpleFragment.MyFragmentActivity
 import com.avon.lv.TransactionFragment.FragmentTransactionActivity
+import com.avon.lv.lifecycle.ChronoActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.startActivity
 
@@ -41,6 +42,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn_transactionfragment_fragment.setOnClickListener(this)
         btn_simple_fragment.setOnClickListener(this)
         btn_network_fragment.setOnClickListener(this)
+        btn_lifecycle_activity.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -49,6 +51,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_simple_fragment -> {startActivity<MyFragmentActivity>()}
             R.id.btn_transactionfragment_fragment -> {startActivity<FragmentTransactionActivity>()}
             R.id.btn_network_fragment -> {startActivity<NetworkCheckActivity>()}
+            R.id.btn_lifecycle_activity-> {startActivity<ChronoActivity>()}
             R.id.btn_click -> { btn_click.text = "Click!!" }
         }
     }
