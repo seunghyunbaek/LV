@@ -35,6 +35,11 @@
         android:layout_height="wrap_content"
         android:text="라이프 사이클" />
 
+    <Button
+        android:id="@+id/btn_nested_activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="중첩 프래그먼트" />
 
     <Button
         android:id="@+id/btn_click"

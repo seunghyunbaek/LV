@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.os.PersistableBundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.avon.lv.NestedFragment.NestedFragmentActivity
 import com.avon.lv.databinding.DatabindingActivity
 import com.avon.lv.NetworkCheckFragment.NetworkCheckActivity
 import com.avon.lv.SimpleFragment.MyFragmentActivity
@@ -43,6 +44,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn_simple_fragment.setOnClickListener(this)
         btn_network_fragment.setOnClickListener(this)
         btn_lifecycle_activity.setOnClickListener(this)
+        btn_nested_activity.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -52,6 +54,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_transactionfragment_fragment -> {startActivity<FragmentTransactionActivity>()}
             R.id.btn_network_fragment -> {startActivity<NetworkCheckActivity>()}
             R.id.btn_lifecycle_activity-> {startActivity<ChronoActivity>()}
+            R.id.btn_nested_activity -> {startActivity<NestedFragmentActivity>()}
             R.id.btn_click -> { btn_click.text = "Click!!" }
         }
     }

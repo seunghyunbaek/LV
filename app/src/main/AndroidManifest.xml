@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme_Noactionbar">
-        <activity android:name=".lifecycle.ChronoActivity"></activity>
+        <activity android:name=".NestedFragment.NestedFragmentActivity"></activity>
+        <activity android:name=".lifecycle.ChronoActivity" />
         <activity android:name=".NetworkCheckFragment.NetworkCheckActivity" />
         <activity android:name=".TransactionFragment.FragmentTransactionActivity" />
         <activity android:name=".SimpleFragment.MyFragmentActivity" />
