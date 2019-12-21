@@ -51,7 +51,20 @@ class ChildFragment : Fragment() {
         textView.text = text
         textView.rotationX += 15
 
+        if (no % 2 == 0) {
+            btn_top_child.visibility = View.INVISIBLE
+        } else {
+            btn_bottom_child.visibility = View.GONE
+        }
+
         btn_top_child.setOnClickListener {
+            if (no % 2 == 0)
+                Toast.makeText(view.context, "" + no + " 번째 자식", Toast.LENGTH_SHORT).show()
+            else
+                Toast.makeText(view.context, "" + no + " 번째 자식", Toast.LENGTH_LONG).show()
+        }
+
+        btn_bottom_child.setOnClickListener {
             if (no % 2 == 0)
                 Toast.makeText(view.context, "" + no + " 번째 자식", Toast.LENGTH_SHORT).show()
             else

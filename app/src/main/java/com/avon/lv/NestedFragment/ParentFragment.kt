@@ -37,6 +37,7 @@ class ParentFragment : Fragment() {
 
     private var mNumber: Int = 0
 
+
     private val mListener: FragmentManager.OnBackStackChangedListener =
         FragmentManager.OnBackStackChangedListener {
             val fragmentManager: FragmentManager = childFragmentManager
@@ -62,19 +63,21 @@ class ParentFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         view.findViewById<Button>(R.id.btn_add_parent).setOnClickListener {
-            val childFragmentManager:FragmentManager = childFragmentManager
+            val childFragmentManager: FragmentManager = childFragmentManager
+            mNumber = childFragmentManager.backStackEntryCount
+            val key = TAG_CHILD + mNumber.toString()
             childFragmentManager.beginTransaction()
-                .add(R.id.container_parentfragment, ChildFragment.getInstance(mNumber))
+                .replace(R.id.container_parentfragment, ChildFragment.getInstance(mNumber), key)
                 .addToBackStack(null)
                 .commit()
         }
 
         view.findViewById<Button>(R.id.btn_remove_parent).setOnClickListener {
-            if(mNumber == 0) {
+            if (mNumber == 0) {
                 return@setOnClickListener
             }
 
-            val childFragmentManager:FragmentManager = childFragmentManager
+            val childFragmentManager: FragmentManager = childFragmentManager
             childFragmentManager.popBackStack()
         }
     }
@@ -82,13 +85,16 @@ class ParentFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         Log.d("ParentFragment", "onActivityCreated")
-        if(savedInstanceState != null) {
+        if (savedInstanceState != null) {
             mNumber = savedInstanceState.getInt(KEY_NUMBER, 0)
         }
-        val childFragmentManager:FragmentManager = childFragmentManager
+        val childFragmentManager: FragmentManager = childFragmentManager
         val fragment: Fragment? = childFragmentManager.findFragmentByTag(TAG_CHILD)
-        Log.d("ParentFragment", "onActivityCreated childFragment=" + fragment + ", mNumber=" + mNumber)
-        if(savedInstanceState == null) {
+        Log.d(
+            "ParentFragment",
+            "onActivityCreated childFragment=" + fragment + ", mNumber=" + mNumber
+        )
+        if (savedInstanceState == null) {
             val transaction: FragmentTransaction = childFragmentManager.beginTransaction()
             transaction.add(
                 R.id.container_parentfragment,
