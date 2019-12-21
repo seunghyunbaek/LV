@@ -50,6 +50,7 @@ class ChronoActivity : AppCompatActivity() {
             }
         }
 
+
         //TODO: observe the ViewModel's elapsed time
         mLiveDataTimerViewModel.getElapsedTime().observe(this, elapsedTimeObserver)
     }
