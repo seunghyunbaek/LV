@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NetworkCheckFragment.NetworkCheckActivity">
+    tools:context=".Chapter2NetworkCheckFragment.NetworkCheckActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

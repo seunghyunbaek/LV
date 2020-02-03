@@ -5,6 +5,6 @@
     android:id="@+id/container_nestedfragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NestedFragment.NestedFragmentActivity">
+    tools:context=".Chapter2NestedFragment.NestedFragmentActivity">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,9 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme_Noactionbar">
-        <activity android:name=".NestedFragment.NestedFragmentActivity"></activity>
+        <activity
+            android:name=".NavigationTest.BottomNavigationActivity"
+            android:label="@string/title_activity_bottom_navigation"></activity>
+        <activity android:name=".Chapter2NestedFragment.NestedFragmentActivity" />
         <activity android:name=".lifecycle.ChronoActivity" />
-        <activity android:name=".NetworkCheckFragment.NetworkCheckActivity" />
+        <activity android:name=".Chapter2NetworkCheckFragment.NetworkCheckActivity" />
         <activity android:name=".TransactionFragment.FragmentTransactionActivity" />
         <activity android:name=".SimpleFragment.MyFragmentActivity" />
         <activity android:name=".databinding.DatabindingActivity" />

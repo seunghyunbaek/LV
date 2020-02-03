@@ -4,9 +4,9 @@ import android.os.Bundle
 import android.os.PersistableBundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.avon.lv.NestedFragment.NestedFragmentActivity
+import com.avon.lv.Chapter2NestedFragment.NestedFragmentActivity
 import com.avon.lv.databinding.DatabindingActivity
-import com.avon.lv.NetworkCheckFragment.NetworkCheckActivity
+import com.avon.lv.Chapter2NetworkCheckFragment.NetworkCheckActivity
 import com.avon.lv.SimpleFragment.MyFragmentActivity
 import com.avon.lv.TransactionFragment.FragmentTransactionActivity
 import com.avon.lv.lifecycle.ChronoActivity
