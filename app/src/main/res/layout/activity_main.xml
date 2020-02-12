@@ -1,49 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-
-    <Button
-        android:id="@+id/btn_databinding"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="데이터바인딩" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_simple_fragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="간단한 프래그먼트" />
+        <Button
+            android:id="@+id/btn_databinding"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="데이터바인딩" />
 
-    <Button
-        android:id="@+id/btn_transactionfragment_fragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="트랜잭션 프래그먼트" />
+        <Button
+            android:id="@+id/btn_simple_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="간단한 프래그먼트" />
 
-    <Button
-        android:id="@+id/btn_network_fragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="네트워크 프래그먼트" />
+        <Button
+            android:id="@+id/btn_transactionfragment_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="트랜잭션 프래그먼트" />
 
-    <Button
-        android:id="@+id/btn_lifecycle_activity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="라이프 사이클" />
+        <Button
+            android:id="@+id/btn_network_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="네트워크 프래그먼트" />
 
-    <Button
-        android:id="@+id/btn_nested_activity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="중첩 프래그먼트" />
+        <Button
+            android:id="@+id/btn_lifecycle_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="라이프 사이클" />
 
-    <Button
-        android:id="@+id/btn_click"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button" />
-</LinearLayout>
+        <Button
+            android:id="@+id/btn_nested_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="중첩 프래그먼트" />
+
+        <Button
+            android:id="@+id/btn_content_provider_sample_a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ContentProviderSample" />
+
+        <Button
+            android:id="@+id/btn_click"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+    </LinearLayout>
+
+
+</ScrollView>

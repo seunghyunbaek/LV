@@ -1,5 +1,8 @@
 package com.avon.lv
 
+import android.app.Activity
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.view.View
@@ -45,6 +48,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn_network_fragment.setOnClickListener(this)
         btn_lifecycle_activity.setOnClickListener(this)
         btn_nested_activity.setOnClickListener(this)
+        btn_content_provider_sample_a.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -55,7 +59,16 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_network_fragment -> {startActivity<NetworkCheckActivity>()}
             R.id.btn_lifecycle_activity-> {startActivity<ChronoActivity>()}
             R.id.btn_nested_activity -> {startActivity<NestedFragmentActivity>()}
+            R.id.btn_content_provider_sample_a -> {
+//                val intent = Intent(applicationContext, ContentProviderSample::class.java)
+//                startActivity(intent)
+                moveActivity<ContentProviderSample>()
+            }
             R.id.btn_click -> { btn_click.text = "Click!!" }
         }
+    }
+    inline fun <reified T: Activity> moveActivity() {
+        val intent = Intent(applicationContext, T::class.java)
+        startActivity(intent)
     }
 }
