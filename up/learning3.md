@@ -42,6 +42,8 @@ Authority를 나타내는 Uri는 보통 CONTENT\_URI, EXTERNAL\_CONTENT\_URI 같
 
 또한 가져오고 싶은 칼럼명도 마찬가지로 정의돼 있으므로 이를 이용합니다. 우선 필요한 projection등을 작성하고, ContentResolver.query()를 호출해 Cursor를 가져옵니다.
 
+<https://gist.github.com/seunghyunbaek/d10ebcb5bae386b1702d70c3afc0d010>
+
 19행에 Cursor.moveToFirst()를 호출해 커서를 맨 앞으로 이동해 true가 반환된 경우에만 Cursor에서 데이터를 가져옵니다. false가 반환된 경우 데이터는 비어있으므로 그 이후의 처리는 필요 없습니다. 
 
 Cursor로부터 데이터를 가져오려면 두 단계가 필요합니다.
