@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.avon.lv">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme_Noactionbar">
-        <activity android:name=".ContentProviderSample"></activity>
+        <activity android:name=".Chapter7BMICalculation.BmiActivity"></activity>
+        <activity android:name=".ContentProviderSample" />
         <activity
             android:name=".NavigationTest.BottomNavigationActivity"
             android:label="@string/title_activity_bottom_navigation" />
