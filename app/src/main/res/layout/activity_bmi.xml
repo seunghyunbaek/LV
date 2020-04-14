@@ -6,4 +6,37 @@
     android:layout_height="match_parent"
     tools:context=".Chapter7BMICalculation.BmiActivity">
 
+    <EditText
+        android:id="@+id/height_bmi"
+        android:layout_width="204dp"
+        android:layout_height="wrap_content"
+        android:hint="키(m):1.70"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/weight_bmi"
+        android:layout_width="204dp"
+        android:layout_height="wrap_content"
+        android:hint="몸무게(kg)"
+        app:layout_constraintStart_toEndOf="@id/height_bmi"
+        app:layout_constraintTop_toTopOf="@id/height_bmi" />
+
+    <Button
+        android:id="@+id/btn_calculation"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="계산"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/height_bmi" />
+
+    <TextView
+        android:id="@+id/result_calculation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_calculation" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
